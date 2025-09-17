@@ -1,8 +1,11 @@
 services:
   otel-collector:
-    image: otel/opentelemetry-collector-contrib:0.123.0
+    # image: otel/opentelemetry-collector-contrib:0.123.0
+    image: honeycombio/honeycomb-opentelemetry-collector:latest
     volumes:
-      - ./otel-collector-config.yaml:/etc/otelcol-contrib/config.yaml
+      - ./config.yaml:/config.yaml
+      - ./data:/data
+      - ./sourcemaps:/tmp/sourcemaps
     env_file:
       - .env
     ports:

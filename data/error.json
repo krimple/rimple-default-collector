@@ -1,0 +1,631 @@
+{
+   "resourceSpans" : [
+      {
+         "resource" : {
+            "attributes" : [
+               {
+                  "key" : "service.name",
+                  "value" : {
+                     "stringValue" : "simple-react-app"
+                  }
+               },
+               {
+                  "key" : "browser.platform",
+                  "value" : {
+                     "stringValue" : "macOS"
+                  }
+               },
+               {
+                  "key" : "browser.brands",
+                  "value" : {
+                     "arrayValue" : {
+                        "values" : [
+                           {
+                              "stringValue" : "Chromium 140"
+                           },
+                           {
+                              "stringValue" : "Not=A?Brand 24"
+                           },
+                           {
+                              "stringValue" : "Google Chrome 140"
+                           }
+                        ]
+                     }
+                  }
+               },
+               {
+                  "key" : "browser.mobile",
+                  "value" : {
+                     "boolValue" : false
+                  }
+               },
+               {
+                  "key" : "browser.language",
+                  "value" : {
+                     "stringValue" : "en-US"
+                  }
+               },
+               {
+                  "key" : "honeycomb.distro.version",
+                  "value" : {
+                     "stringValue" : "1.0.2"
+                  }
+               },
+               {
+                  "key" : "honeycomb.distro.runtime_version",
+                  "value" : {
+                     "stringValue" : "browser"
+                  }
+               },
+               {
+                  "key" : "telemetry.distro.name",
+                  "value" : {
+                     "stringValue" : "@honeycombio/opentelemetry-web"
+                  }
+               },
+               {
+                  "key" : "telemetry.distro.version",
+                  "value" : {
+                     "stringValue" : "1.0.2"
+                  }
+               },
+               {
+                  "key" : "user_agent.original",
+                  "value" : {
+                     "stringValue" : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+                  }
+               },
+               {
+                  "key" : "browser.touch_screen_enabled",
+                  "value" : {
+                     "boolValue" : false
+                  }
+               },
+               {
+                  "key" : "browser.name",
+                  "value" : {
+                     "stringValue" : "Chrome"
+                  }
+               },
+               {
+                  "key" : "browser.version",
+                  "value" : {
+                     "stringValue" : "140.0.0.0"
+                  }
+               },
+               {
+                  "key" : "device.type",
+                  "value" : {
+                     "stringValue" : "desktop"
+                  }
+               },
+               {
+                  "key" : "network.effectiveType",
+                  "value" : {
+                     "stringValue" : "4g"
+                  }
+               },
+               {
+                  "key" : "screen.width",
+                  "value" : {
+                     "intValue" : "1440"
+                  }
+               },
+               {
+                  "key" : "screen.height",
+                  "value" : {
+                     "intValue" : "2560"
+                  }
+               },
+               {
+                  "key" : "screen.size",
+                  "value" : {
+                     "stringValue" : "large"
+                  }
+               },
+               {
+                  "key" : "entry_page.path",
+                  "value" : {
+                     "stringValue" : "/"
+                  }
+               },
+               {
+                  "key" : "entry_page.hash",
+                  "value" : {
+                     "stringValue" : ""
+                  }
+               },
+               {
+                  "key" : "entry_page.hostname",
+                  "value" : {
+                     "stringValue" : "localhost"
+                  }
+               },
+               {
+                  "key" : "entry_page.referrer",
+                  "value" : {
+                     "stringValue" : ""
+                  }
+               },
+               {
+                  "key" : "telemetry.sdk.language",
+                  "value" : {
+                     "stringValue" : "webjs"
+                  }
+               },
+               {
+                  "key" : "telemetry.sdk.name",
+                  "value" : {
+                     "stringValue" : "opentelemetry"
+                  }
+               },
+               {
+                  "key" : "telemetry.sdk.version",
+                  "value" : {
+                     "stringValue" : "2.0.1"
+                  }
+               }
+            ]
+         },
+         "scopeSpans" : [
+            {
+               "scope" : {
+                  "name" : "@opentelemetry/instrumentation-user-interaction",
+                  "version" : "0.50.0"
+               },
+               "spans" : [
+                  {
+                     "attributes" : [
+                        {
+                           "key" : "event_type",
+                           "value" : {
+                              "stringValue" : "click"
+                           }
+                        },
+                        {
+                           "key" : "target_element",
+                           "value" : {
+                              "stringValue" : "BUTTON"
+                           }
+                        },
+                        {
+                           "key" : "target_xpath",
+                           "value" : {
+                              "stringValue" : "//html/body/div/button"
+                           }
+                        },
+                        {
+                           "key" : "http.url",
+                           "value" : {
+                              "stringValue" : "http://localhost:4173/"
+                           }
+                        },
+                        {
+                           "key" : "SampleRate",
+                           "value" : {
+                              "intValue" : "1"
+                           }
+                        },
+                        {
+                           "key" : "browser.width",
+                           "value" : {
+                              "intValue" : "600"
+                           }
+                        },
+                        {
+                           "key" : "browser.height",
+                           "value" : {
+                              "intValue" : "1004"
+                           }
+                        },
+                        {
+                           "key" : "page.hash",
+                           "value" : {
+                              "stringValue" : ""
+                           }
+                        },
+                        {
+                           "key" : "page.url",
+                           "value" : {
+                              "stringValue" : "http://localhost:4173/"
+                           }
+                        },
+                        {
+                           "key" : "page.route",
+                           "value" : {
+                              "stringValue" : "/"
+                           }
+                        },
+                        {
+                           "key" : "page.hostname",
+                           "value" : {
+                              "stringValue" : "localhost"
+                           }
+                        },
+                        {
+                           "key" : "page.search",
+                           "value" : {
+                              "stringValue" : ""
+                           }
+                        },
+                        {
+                           "key" : "url.path",
+                           "value" : {
+                              "stringValue" : "/"
+                           }
+                        },
+                        {
+                           "key" : "session.id",
+                           "value" : {
+                              "stringValue" : "1c1ef9bc23a27bf251640bb21b55d202"
+                           }
+                        }
+                     ],
+                     "endTimeUnixNano" : "1758118763277200000",
+                     "kind" : 1,
+                     "name" : "click",
+                     "parentSpanId" : "",
+                     "spanId" : "e5be705395c6e438",
+                     "startTimeUnixNano" : "1758118763277000000",
+                     "status" : {},
+                     "traceId" : "6a503b973d0bad143d79d36e8f5487fc"
+                  },
+                  {
+                     "attributes" : [
+                        {
+                           "key" : "event_type",
+                           "value" : {
+                              "stringValue" : "click"
+                           }
+                        },
+                        {
+                           "key" : "target_element",
+                           "value" : {
+                              "stringValue" : "BUTTON"
+                           }
+                        },
+                        {
+                           "key" : "target_xpath",
+                           "value" : {
+                              "stringValue" : "//html/body/div/button"
+                           }
+                        },
+                        {
+                           "key" : "http.url",
+                           "value" : {
+                              "stringValue" : "http://localhost:4173/"
+                           }
+                        },
+                        {
+                           "key" : "SampleRate",
+                           "value" : {
+                              "intValue" : "1"
+                           }
+                        },
+                        {
+                           "key" : "browser.width",
+                           "value" : {
+                              "intValue" : "600"
+                           }
+                        },
+                        {
+                           "key" : "browser.height",
+                           "value" : {
+                              "intValue" : "1004"
+                           }
+                        },
+                        {
+                           "key" : "page.hash",
+                           "value" : {
+                              "stringValue" : ""
+                           }
+                        },
+                        {
+                           "key" : "page.url",
+                           "value" : {
+                              "stringValue" : "http://localhost:4173/"
+                           }
+                        },
+                        {
+                           "key" : "page.route",
+                           "value" : {
+                              "stringValue" : "/"
+                           }
+                        },
+                        {
+                           "key" : "page.hostname",
+                           "value" : {
+                              "stringValue" : "localhost"
+                           }
+                        },
+                        {
+                           "key" : "page.search",
+                           "value" : {
+                              "stringValue" : ""
+                           }
+                        },
+                        {
+                           "key" : "url.path",
+                           "value" : {
+                              "stringValue" : "/"
+                           }
+                        },
+                        {
+                           "key" : "session.id",
+                           "value" : {
+                              "stringValue" : "1c1ef9bc23a27bf251640bb21b55d202"
+                           }
+                        }
+                     ],
+                     "endTimeUnixNano" : "1758118763280200000",
+                     "kind" : 1,
+                     "name" : "click",
+                     "parentSpanId" : "e5be705395c6e438",
+                     "spanId" : "3e04713d377ed4a0",
+                     "startTimeUnixNano" : "1758118763278000000",
+                     "status" : {},
+                     "traceId" : "6a503b973d0bad143d79d36e8f5487fc"
+                  }
+               ]
+            },
+            {
+               "scope" : {
+                  "name" : "@honeycombio/instrumentation-global-errors",
+                  "version" : "1.0.2"
+               },
+               "spans" : [
+                  {
+                     "attributes" : [
+                        {
+                           "key" : "exception.type",
+                           "value" : {
+                              "stringValue" : "Error"
+                           }
+                        },
+                        {
+                           "key" : "exception.message",
+                           "value" : {
+                              "stringValue" : "I blewed up!"
+                           }
+                        },
+                        {
+                           "key" : "exception.stacktrace",
+                           "value" : {
+                              "stringValue" : "Error: I blewed up!\n    at i (http://localhost:4173/assets/index-CVq2w0eT.js:74:100011)\n    at N_ (http://localhost:4173/assets/index-CVq2w0eT.js:48:117232)\n    at http://localhost:4173/assets/index-CVq2w0eT.js:48:122337\n    at Bd (http://localhost:4173/assets/index-CVq2w0eT.js:48:9040)\n    at vc (http://localhost:4173/assets/index-CVq2w0eT.js:48:118466)\n    at Cc (http://localhost:4173/assets/index-CVq2w0eT.js:49:26674)\n    at Ly (http://localhost:4173/assets/index-CVq2w0eT.js:49:26496)\n    at ML._invokeListener (http://localhost:4173/assets/index-CVq2w0eT.js:74:82192)\n    at http://localhost:4173/assets/index-CVq2w0eT.js:74:82590\n    at H0.with (http://localhost:4173/assets/index-CVq2w0eT.js:49:81786)"
+                           }
+                        },
+                        {
+                           "key" : "exception.structured_stacktrace.columns",
+                           "value" : {
+                              "arrayValue" : {
+                                 "values" : [
+                                    {
+                                       "intValue" : "100011"
+                                    },
+                                    {
+                                       "intValue" : "117232"
+                                    },
+                                    {
+                                       "intValue" : "122337"
+                                    },
+                                    {
+                                       "intValue" : "9040"
+                                    },
+                                    {
+                                       "intValue" : "118466"
+                                    },
+                                    {
+                                       "intValue" : "26674"
+                                    },
+                                    {
+                                       "intValue" : "26496"
+                                    },
+                                    {
+                                       "intValue" : "82192"
+                                    },
+                                    {
+                                       "intValue" : "82590"
+                                    },
+                                    {
+                                       "intValue" : "81786"
+                                    }
+                                 ]
+                              }
+                           }
+                        },
+                        {
+                           "key" : "exception.structured_stacktrace.lines",
+                           "value" : {
+                              "arrayValue" : {
+                                 "values" : [
+                                    {
+                                       "intValue" : "74"
+                                    },
+                                    {
+                                       "intValue" : "48"
+                                    },
+                                    {
+                                       "intValue" : "48"
+                                    },
+                                    {
+                                       "intValue" : "48"
+                                    },
+                                    {
+                                       "intValue" : "48"
+                                    },
+                                    {
+                                       "intValue" : "49"
+                                    },
+                                    {
+                                       "intValue" : "49"
+                                    },
+                                    {
+                                       "intValue" : "74"
+                                    },
+                                    {
+                                       "intValue" : "74"
+                                    },
+                                    {
+                                       "intValue" : "49"
+                                    }
+                                 ]
+                              }
+                           }
+                        },
+                        {
+                           "key" : "exception.structured_stacktrace.functions",
+                           "value" : {
+                              "arrayValue" : {
+                                 "values" : [
+                                    {
+                                       "stringValue" : "i"
+                                    },
+                                    {
+                                       "stringValue" : "N_"
+                                    },
+                                    {
+                                       "stringValue" : "?"
+                                    },
+                                    {
+                                       "stringValue" : "Bd"
+                                    },
+                                    {
+                                       "stringValue" : "vc"
+                                    },
+                                    {
+                                       "stringValue" : "Cc"
+                                    },
+                                    {
+                                       "stringValue" : "Ly"
+                                    },
+                                    {
+                                       "stringValue" : "ML._invokeListener"
+                                    },
+                                    {
+                                       "stringValue" : "?"
+                                    },
+                                    {
+                                       "stringValue" : "H0.with"
+                                    }
+                                 ]
+                              }
+                           }
+                        },
+                        {
+                           "key" : "exception.structured_stacktrace.urls",
+                           "value" : {
+                              "arrayValue" : {
+                                 "values" : [
+                                    {
+                                       "stringValue" : "http://localhost:4173/assets/index-CVq2w0eT.js"
+                                    },
+                                    {
+                                       "stringValue" : "http://localhost:4173/assets/index-CVq2w0eT.js"
+                                    },
+                                    {
+                                       "stringValue" : "http://localhost:4173/assets/index-CVq2w0eT.js"
+                                    },
+                                    {
+                                       "stringValue" : "http://localhost:4173/assets/index-CVq2w0eT.js"
+                                    },
+                                    {
+                                       "stringValue" : "http://localhost:4173/assets/index-CVq2w0eT.js"
+                                    },
+                                    {
+                                       "stringValue" : "http://localhost:4173/assets/index-CVq2w0eT.js"
+                                    },
+                                    {
+                                       "stringValue" : "http://localhost:4173/assets/index-CVq2w0eT.js"
+                                    },
+                                    {
+                                       "stringValue" : "http://localhost:4173/assets/index-CVq2w0eT.js"
+                                    },
+                                    {
+                                       "stringValue" : "http://localhost:4173/assets/index-CVq2w0eT.js"
+                                    },
+                                    {
+                                       "stringValue" : "http://localhost:4173/assets/index-CVq2w0eT.js"
+                                    }
+                                 ]
+                              }
+                           }
+                        },
+                        {
+                           "key" : "SampleRate",
+                           "value" : {
+                              "intValue" : "1"
+                           }
+                        },
+                        {
+                           "key" : "browser.width",
+                           "value" : {
+                              "intValue" : "600"
+                           }
+                        },
+                        {
+                           "key" : "browser.height",
+                           "value" : {
+                              "intValue" : "1004"
+                           }
+                        },
+                        {
+                           "key" : "page.hash",
+                           "value" : {
+                              "stringValue" : ""
+                           }
+                        },
+                        {
+                           "key" : "page.url",
+                           "value" : {
+                              "stringValue" : "http://localhost:4173/"
+                           }
+                        },
+                        {
+                           "key" : "page.route",
+                           "value" : {
+                              "stringValue" : "/"
+                           }
+                        },
+                        {
+                           "key" : "page.hostname",
+                           "value" : {
+                              "stringValue" : "localhost"
+                           }
+                        },
+                        {
+                           "key" : "page.search",
+                           "value" : {
+                              "stringValue" : ""
+                           }
+                        },
+                        {
+                           "key" : "url.path",
+                           "value" : {
+                              "stringValue" : "/"
+                           }
+                        },
+                        {
+                           "key" : "session.id",
+                           "value" : {
+                              "stringValue" : "1c1ef9bc23a27bf251640bb21b55d202"
+                           }
+                        }
+                     ],
+                     "endTimeUnixNano" : "1758118763280100000",
+                     "kind" : 1,
+                     "name" : "exception",
+                     "parentSpanId" : "3e04713d377ed4a0",
+                     "spanId" : "71b1ca13fbf4c1fe",
+                     "startTimeUnixNano" : "1758118763280000000",
+                     "status" : {
+                        "code" : 2,
+                        "message" : "I blewed up!"
+                     },
+                     "traceId" : "6a503b973d0bad143d79d36e8f5487fc"
+                  }
+               ]
+            }
+         ]
+      }
+   ]
+}
