@@ -1,0 +1,53 @@
+receivers:
+  otlp:
+    protocols:
+      http:
+        endpoint: 0.0.0.0:4318
+        cors:
+          allowed_origins:
+            - "http://0.0.0.0:4173"
+            - "http://0.0.0.0:5173"
+            - "http://localhost:4173"
+            - "http://localhost:5173"
+            - "http://appserver:9999"
+            - "http://0.0.0.0:8081"
+            - "http://localhost:9999"
+          allowed_headers:
+            - "Access-Control-Request-Headers"
+            - "Access-Control-Request-Method"
+            - "content-type"
+            - "Origin"
+            - "X-Honeycomb-Team"
+processors:
+  source_map_symbolicator:
+    source_map_store: file_store
+    local_source_maps:
+  batch:
+
+exporters:
+  debug:
+    verbosity: basic
+  file/traces__json:
+    path: ./data/*.json
+    format: json
+    group_by:
+      enabled: true
+      resource_attribute: service.name
+    rotation:
+      max_megabytes: 100
+      max_backups: 5
+      max_days: 7
+      localtime: true
+    flush_interval: 1s
+  otlp:
+    endpoint: https://api.honeycomb.io:443
+    headers:
+      "x-honeycomb-team": "${env:HONEYCOMB_API_KEY}"
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      # processors: [batch, source_map_symbolicator]
+      processors: [batch]
+      exporters: [debug, otlp, file/traces__json]

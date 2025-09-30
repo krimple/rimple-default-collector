@@ -1,0 +1,13 @@
+services:
+  otel-collector:
+    # image: otel/opentelemetry-collector-contrib:0.123.0
+    image: honeycombio/honeycomb-opentelemetry-collector:latest
+    volumes:
+      - ${CONFIG_FILE}:/config.yaml
+      - ./data:/data
+      - ./sourcemaps:/tmp/sourcemaps
+    env_file:
+      - .env
+    ports:
+      - "4317:4317" # OTLP gRPC receiver
+      - "4318:4318" # OTLP http receiver

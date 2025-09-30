@@ -2,7 +2,8 @@ services:
   otel-collector:
     image: otel/opentelemetry-collector-contrib:0.123.0
     volumes:
-      - ./otel-collector-config.yaml:/etc/otelcol-contrib/config.yaml
+      - ${CONFIG_FILE}:/etc/otelcol-contrib/config.yaml
+      - ./data:/data
     env_file:
       - .env
     ports:
