@@ -1,0 +1,42 @@
+receivers:
+  otlp:
+    protocols:
+      http:
+        endpoint: 0.0.0.0:4318
+        cors:
+          allowed_origins:
+            - "http://0.0.0.0:5173"
+            - "http://localhost:5173"
+            - "http://appserver:9999"
+            - "http://0.0.0.0:8081"
+            - "http://localhost:8081"
+            - "http://localhost:9999"
+          allowed_headers:
+            - "Access-Control-Request-Headers"
+            - "Access-Control-Request-Method"
+            - "content-type"
+            - "Origin"
+            - "X-Honeycomb-Team"
+
+processors:
+  batch:
+
+exporters:
+  debug:
+    verbosity: basic
+  otlp:
+    endpoint: https://api.honeycomb.io:443
+    headers:
+      "x-honeycomb-team": "${HONEYCOMB_API_KEY}"
+
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [debug, otlp]
+    logs:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [debug, otlp]
