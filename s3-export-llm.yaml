@@ -1,0 +1,67 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+        endpoint: 0.0.0.0:4317
+      http:
+        endpoint: 0.0.0.0:4318
+
+processors:
+  batch:
+
+exporters:
+  otlp:
+    endpoint: https://api.honeycomb.io:443
+    headers:
+      "x-honeycomb-team": "${HONEYCOMB_API_KEY}"
+  debug:
+    verbosity: basic
+  awss3/traces:
+    s3uploader:
+      region: "us-east-1"
+      s3_bucket: "devrel-genai-telemetry"
+      s3_prefix: "agentic-telemetry-demo"
+      s3_partition_format: "year=%Y/month=%m/day=%d/hour=%H/minute=%M"
+      compression: gzip
+    marshaler: otlp_json
+    timeout: 30s
+    sending_queue:
+      enabled: true
+      queue_size: 5000
+  awss3/metrics:
+    s3uploader:
+      region: "us-east-1"
+      s3_bucket: "devrel-genai-telemetry"
+      s3_prefix: "agentic-telemetry-demo"
+      s3_partition_format: "year=%Y/month=%m/day=%d/hour=%H/minute=%M"
+      compression: gzip
+    marshaler: otlp_json
+    sending_queue:
+      enabled: true
+      queue_size: 5000
+  awss3/logs:
+    s3uploader:
+      region: "us-east-1"
+      s3_bucket: "devrel-genai-telemetry"
+      s3_prefix: "agentic-telemetry-demo"
+      s3_partition_format: "year=%Y/month=%m/day=%d/hour=%H/minute=%M"
+      compression: gzip
+    marshaler: otlp_json
+    sending_queue:
+      enabled: true
+      queue_size: 5000
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [debug, otlp, awss3/traces]
+    logs:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [debug, otlp, awss3/logs]
+    metrics:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [debug, otlp, awss3/metrics]

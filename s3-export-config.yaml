@@ -1,0 +1,80 @@
+receivers:
+  otlp:
+    protocols:
+      http:
+        endpoint: 0.0.0.0:4318
+        # cors:
+        #   allowed_origins:
+        #     - "http://0.0.0.0:4173"
+        #     - "http://0.0.0.0:5173"
+        #     - "http://localhost:4173"
+        #     - "http://localhost:5173"
+        #     - "http://appserver:9999"
+        #     - "http://0.0.0.0:8081"
+        #     - "http://localhost:9999"
+        #   allowed_headers:
+        #     - "Access-Control-Request-Headers"
+        #     - "Access-Control-Request-Method"
+        #     - "content-type"
+        #     - "Origin"
+        #     - "X-Honeycomb-Team"
+processors:
+  batch:
+
+exporters:
+  debug:
+    verbosity: detailed
+
+  awss3/traces:
+    s3uploader:
+      region: "us-east-1"
+      s3_bucket: "rimple-perseverating-collector-content"
+      s3_prefix: "otel/traces"
+      # Partition format if desired:
+      s3_partition_format: "year=%Y/month=%m/day=%d/hour=%H/minute=%M"
+      compression: gzip
+    marshaler: otlp_proto
+    # Optionally:
+    timeout: 30s
+    sending_queue:
+      enabled: true
+      queue_size: 5000
+
+  awss3/metrics:
+    s3uploader:
+      region: "us-east-1"
+      s3_bucket: "rimple-perseverating-collector-content"
+      s3_prefix: "otel/metrics"
+      s3_partition_format: "year=%Y/month=%m/day=%d/hour=%H/minute=%M"
+      compression: gzip
+    marshaler: otlp_proto
+    sending_queue:
+      enabled: true
+      queue_size: 5000
+
+  awss3/logs:
+    s3uploader:
+      region: "us-east-1"
+      s3_bucket: "rimple-perseverating-collector-content"
+      s3_prefix: "otel/logs"
+      compression: gzip
+      s3_partition_format: "year=%Y/month=%m/day=%d/hour=%H/minute=%M"
+    marshaler: otlp_proto
+    sending_queue:
+      enabled: true
+      queue_size: 5000
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [debug, awss3/traces]
+    logs:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [debug, awss3/logs]
+    metrics:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [debug, awss3/metrics]
